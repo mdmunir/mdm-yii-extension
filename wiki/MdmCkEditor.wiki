@@ -1,0 +1,5 @@
+=Instalasi extension MdmCkEditor.=
+
+
+Untuk dapat memakai MdmCkEditor, anda harus punya ckeditor terlebih dahulu, silakan download ckeditor di [http://ckeditor.com/download sini].
+Ekstrak file yang sudah anda download ke folder protected/extension
