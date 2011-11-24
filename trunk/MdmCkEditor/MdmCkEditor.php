@@ -13,6 +13,7 @@
 class MdmCkEditor extends CInputWidget{
     //put your code here
     
+    public $ckeditorPackage = 'ckeditor';
     public $options=array();
     public $editorReady = 'function(){}';
 
@@ -36,16 +37,8 @@ class MdmCkEditor extends CInputWidget{
         $options = CJavaScript::encode($this->options);
 
         $js = "jQuery('#{$id}').ckeditor({$this->editorReady},$options);";
-        //{$this->editorReady},$options
-        
-        $cs = Yii::app()->getClientScript();
-        $assets = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'ckeditor' . DIRECTORY_SEPARATOR;
-        $aUrl = Yii::app()->getAssetManager()->publish($assets);
-        $cs->registerCoreScript('jquery');
-        $cs->registerScriptFile($aUrl . DIRECTORY_SEPARATOR . 'ckeditor.js');
-        $cs->registerScriptFile($aUrl . DIRECTORY_SEPARATOR . 'adapters/adapter.jquery.js');
-
-        $cs->registerScript(__CLASS__ . '#' . $id, $js);
+        Yii::app()->getClientScript()->registerPackage($this->ckeditorPackage);
+        Yii::app()->getClientScript()->registerScript(__CLASS__ . '#' . $id, $js);
     }
     
 }
