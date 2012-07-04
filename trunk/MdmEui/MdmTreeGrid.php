@@ -1,12 +1,6 @@
 <?php
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of MdmLinkButton
+ * Description of MdmTreeGrid
  *
  * @author mdmunir
  */
@@ -46,7 +40,7 @@ class MdmTreeGrid extends MdmEuiWidget {
             $options = CJavaScript::encode($this->options);
             Yii::app()->getClientScript()->registerScript(__CLASS__ . '#' . $id, "jQuery('#{$id}').treegrid($options);");
         }
-        echo CHtml::tag($this->tagName, $this->htmlOptions, $this->text);
+        echo CHtml::tag($this->tagName, $this->htmlOptions, "\n");
     }
 
 }
