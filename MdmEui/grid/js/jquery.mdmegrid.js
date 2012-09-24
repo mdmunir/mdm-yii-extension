@@ -1,10 +1,8 @@
 /**
- * edatagrid - jQuery EasyUI
+ * mdmegrid - jQuery EasyUI
  * 
- * Licensed under the GPL:
- *   http://www.gnu.org/licenses/gpl.txt
  *
- * Copyright 2011 stworthy [ stworthy@gmail.com ] 
+ * Copyright 2012 mdmunir [ misbahuldmunir@gmail.com ] 
  * 
  * Dependencies:
  *   datagrid
